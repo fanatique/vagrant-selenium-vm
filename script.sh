@@ -40,6 +40,13 @@ else
   mv chromedriver /usr/local/bin
 
   echo "Done downloading and installing basic packages"
+
+  echo "Writing entries into the host file"
+  for var in "$@"
+  do
+      echo "192.168.33.1  $var" >> /etc/hosts
+  done
+
   # So that running `vagrant provision` doesn't redownload everything
   touch /.installed
 fi

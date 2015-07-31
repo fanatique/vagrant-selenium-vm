@@ -1,0 +1,3 @@
+vagrantfile:
+  host_entries:
+    - "some-host.dev"
